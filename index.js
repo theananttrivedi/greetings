@@ -12,9 +12,9 @@ if (!params.has("n") || params.get("n") === "") {
 }
 
 async function congratulate() {
-  party.confetti(container, {
-    count: party.variation.range(80, 100),
-  });
+  // party.confetti(container, {
+  //   count: party.variation.range(80, 100),
+  // });
 
   container.innerHTML = "";
   let node, h1, img;
