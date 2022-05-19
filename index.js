@@ -10,3 +10,39 @@ if (!params.has("n") || params.get("n") === "") {
 } else if (params.has("n")) {
   typewriterText.innerHTML = params.get("n");
 }
+
+async function congratulate() {
+  party.confetti(container, {
+    count: party.variation.range(80, 100),
+  });
+
+  setTimeout(() => {
+    container.innerHTML = "";
+    let node, h1, img;
+    node = document.createElement("img");
+    img = container.appendChild(node);
+    img.classList.add("bouncing");
+    img.src = "code-free/perspective_matte.webp";
+
+    node = document.createElement("h1");
+    h1 = container.appendChild(node);
+    h1.classList.add("typewriter-text");
+    h1.innerHTML = params.get("n");
+
+    node = document.createElement("h1");
+    h1 = container.appendChild(node);
+    h1.classList.add("loading-effect");
+    h1.innerHTML = "Thanks for visiting!";
+
+    node = document.createElement("h1");
+    h1 = container.appendChild(node);
+    h1.classList.add("loading-effect");
+    h1.innerHTML = "I am Happy!";
+  }, 2000);
+
+  setInterval(() => {
+    party.confetti(container, {
+      count: party.variation.range(10, 20),
+    });
+  }, 500);
+}
