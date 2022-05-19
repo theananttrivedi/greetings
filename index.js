@@ -1,15 +1,23 @@
 const params = new URLSearchParams(window.location.search);
 const container = document.querySelector(".container");
 const typewriterText = document.querySelector(".typewriter-text");
+const title = document.querySelector('title');
+
 const MESSAGE = "Sorry Wrong URL 😢";
 if (!params.has("n") || params.get("n") === "") {
   container.innerHTML = "";
   const node = document.createElement("h1");
   const h1 = container.appendChild(node);
   h1.innerHTML = MESSAGE;
+  title.innerHTML = "Sorry !";
 } else if (params.has("n")) {
   typewriterText.innerHTML = params.get("n");
+  title.innerHTML = params.get("n");
 }
+
+
+
+
 
 async function congratulate() {
   // party.confetti(container, {
