@@ -16,29 +16,22 @@ async function congratulate() {
     count: party.variation.range(80, 100),
   });
 
-  setTimeout(() => {
-    container.innerHTML = "";
-    let node, h1, img;
-    node = document.createElement("img");
-    img = container.appendChild(node);
-    img.classList.add("bouncing");
-    img.src = "code-free/perspective_matte.webp";
+  container.innerHTML = "";
+  let node, h1, img;
+  node = document.createElement("img");
+  img = container.appendChild(node);
+  img.classList.add("bouncing");
+  img.src = "code-free/perspective_matte.webp";
 
-    node = document.createElement("h1");
-    h1 = container.appendChild(node);
-    h1.classList.add("typewriter-text");
-    h1.innerHTML = params.get("n");
+  node = document.createElement("h1");
+  h1 = container.appendChild(node);
+  h1.classList.add("typewriter-text");
+  h1.innerHTML = params.get("n");
 
-    node = document.createElement("h1");
-    h1 = container.appendChild(node);
-    h1.classList.add("loading-effect");
-    h1.innerHTML = "Thanks for visiting!";
-
-    node = document.createElement("h1");
-    h1 = container.appendChild(node);
-    h1.classList.add("loading-effect");
-    h1.innerHTML = "I am Happy!";
-  }, 2000);
+  node = document.createElement("h1");
+  h1 = container.appendChild(node);
+  h1.classList.add("loading-effect");
+  h1.innerHTML = "Thanks for visiting!";
 
   setInterval(() => {
     party.confetti(container, {

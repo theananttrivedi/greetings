@@ -16,7 +16,7 @@
 
 .bouncing{
     position: absolute;
-    top: 200px;
+    top: 100px;
     animation: upanddown 0.5s ease-in-out infinite alternate;
 }
 
